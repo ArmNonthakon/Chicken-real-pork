@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="../../css/adminOrder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <a href="/admin">
+            <div style="display: flex; justify-content: center; margin-top: 10px; margin-left: 10px;">
+                <div><img src="../../img/fried-chicken-svgrepo-com.svg" width="55px" alt=""></div>
+
+                <pre style="font-size: 14px; font-weight: 900; padding-top: 16px;">Chicken 
+real pork</pre>
+            </div>
+        </a>
+        <div class="head">
+            <a href="/admin">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Home</p>
+            </a>
+            <a href="/admin/adminProduct">
+                <p style=" font-size: 18px; margin-top: 30px ;
+            font-weight: 900;">Product</p>
+            </a>
+            <a href="/admin/adminOrder">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Order</p>
+            </a>
+            <a href="/admin/comment">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Comment</p>
+            <a href="/admin/adminEmployee">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Employee</p>
+            </a>
+            <div> </div>
+        </div>
+        <div style="width: 100px;">
+
+        </div>
+    </nav>
+    <hr style="margin-top: 20px;">
+    <article>
+        <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+            <div style="background-color: rgba(53, 51, 51, 0.267);">
+                <span> <% if (data.productType === 'food') { %>
+                    <img src="../../img/<%=data.image %>" width="100%" height="100%" style="padding-top: 30px;" alt="">
+                <% } else if (data.productType === 'dessert') { %>
+                    <img src="../../img/<%=data.image %>" width="100%" height="100%" style="padding-top: 30px;" alt="">
+                <% } else { %>
+                    <img src="../../img/<%=data.image %>" width="250px" height="auto" style="padding-top: 30px;" alt="">
+                <% } %>
+                    </span>
+                <span class="bProduct">
+                    <h3 style="color: aliceblue; padding-top: 15px; font-size: 22px; margin-left: 27px;">
+                        <%=data.orderNo %>
+                    </h3>
+                    <span style="display: flex; justify-content: space-between;">
+                        <h3 style="color: aliceblue; padding-top: 30px; font-size: 18px;margin-left: 20px;"><%=data.productName %> </h3>
+                        <h3 style="color: aliceblue; padding-top: 30px; font-size: 18px;margin-left: 20px;">Amount : <%=data.productAmount %> </h3>
+                        <form action="/admin/orderComplete" method="post">
+                            <input type="text" name="number" value="<%=data.number %>" style="display: none;">
+                            <input type="text" name="no" value="<%=data.orderNo %>" style="display: none;">
+                            <input type="submit"   class="orderButton" value="Complete" style=" text-align: center; width: 140px; border-radius: 10px;">
+                        </form>
+
+                    </span>
+
+                </span>
+
+            </div>
+
+
+
+            <% i++; }) %>
+                <% } else{ %>
+                    <span></span>
+                    <span>
+                        <h1 style="font-size:40px ;">No more order!!!</h1>
+                        <i class="fa-solid fa-utensils" style="font-size: 300px; color: rgb(82, 84, 86); margin-right: 30px; margin-top: 50px;"></i>
+                    </span>
+                    <span></span>
+                    <% } %>
+
+
+
+    </article>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div>
+            <p>Menu</p>
+            <a href="">
+                <li>Chicken</li>
+            </a>
+            <a href="">
+                <li>Drinks</li>
+            </a>
+
+        </div>
+        <div>
+            <p>About us</p>
+        </div>
+        <div>
+            <p style="padding-bottom: 10px;">Contact us</p>
+            <a href=""><i class="fa-brands fa-facebook" style="font-size: 25px; padding-right: 5px;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-square-twitter" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-youtube" style="font-size: 25px;  padding-right: 5px;"></i></a>
+        </div>
+
+
+    </footer>
+    <div class="f">
+        <p>Copyright © 2023–2023 ChickenRealPork.com. All rights reserved.</p>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="../../css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body >
+    <nav >
+        <a href="/"><div style="display: flex; justify-content: center; margin-top: 10px; margin-left: 10px;">
+            <div ><img src="../../img/fried-chicken-svgrepo-com.svg" width="55px" alt=""></div>
+            
+            <pre style="font-size: 14px; font-weight: 900; padding-top: 16px;" >Chicken 
+real pork</pre>
+        </div></a>
+        <div class="head">   
+            <a href="/"><p style=" font-size: 15px; margin-top: 15px;
+            font-weight: 900;">Menu</p></a>
+            <a href="/home/feedback">  <p style=" font-size: 15px; margin-top: 15px;
+                font-weight: 900;">Feed back</p></a>
+            <a href="/signIn"> <div class="signIn">Sign in</div></a>
+            <div class="orderOption">
+               <a href=""class="orderLeft"> <p >TAKE HOME</p></a>
+               <a href=""class="orderRight"> <p >DELIVERLY</p></a>
+            </div>
+            <div>
+                <a href="/cart  "><img src="../../img/shopping-cart-outline-svgrepo-com.svg" style="margin: 10px 20px 0px 20px;" width="40%" alt=""></a>
+            </div>
+        </div>
+    </nav>
+    <hr style="margin-top: 20px;">
+    <article>
+        <p style="font-size: 28px; font-weight: bolder; margin-top: 40px; text-decoration: dashed; ">Register</p>
+        <h3 style="color: red;"><%= aaa %></h3>
+        <form method="post" action="/register" style="display: flex; justify-content: center ;flex-direction: column; margin-top: 20px;">
+            <input type="text" name="email"  placeholder="Email*@gmil.com" autocomplete="off"><br>
+            <input type="text" name="mobile"  placeholder="Mobile number*0xx-xxx-xxxx" autocomplete="off"><br>
+            <input type="text" name="name"   placeholder="Name*at least 3 letter" autocomplete="off"><br>
+            <input type="password" name="password"   placeholder="Password*at least 8 letter" autocomplete="off"><br>
+            <input type="password" name="password2"   placeholder="Confirm password*" autocomplete="off"><br>
+            <input type="submit"  style="background-color: rgb(20, 115, 248); color: white; border: none;"value="Sign up" class="signIn" style="border: none;" >
+            
+        </form>
+    </article>
+    
+    <footer style="margin-top: 0px;">
+        <div>
+            <p>Menu</p>
+            <a href=""><li>Chicken</li></a>
+            <a href=""><li>Drinks</li></a>
+            
+        </div>
+        <div><p>About us</p></div>
+        <div>
+            <p style="padding-bottom: 10px;">Contact us</p>
+            <a href=""><i class="fa-brands fa-facebook" style="font-size: 25px; padding-right: 5px;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-square-twitter" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-youtube" style="font-size: 25px;  padding-right: 5px;" ></i></a>    
+        </div>
+        
+
+    </footer>
+    <div class="f">
+        <p>Copyright © 2023–2023 ChickenRealPork.com. All rights reserved.</p>
+    </div>
+   
+   
+ 
+</body>
+
+</html>

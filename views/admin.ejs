@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <a href="/admin">
+            <div style="display: flex; justify-content: center; margin-top: 10px; margin-left: 10px;">
+                <div><img src="../../img/fried-chicken-svgrepo-com.svg" width="55px" alt=""></div>
+
+                <pre style="font-size: 14px; font-weight: 900; padding-top: 16px;">Chicken 
+real pork</pre>
+            </div>
+        </a>
+        <div class="head">
+            <a href="/admin">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Home</p>
+            </a>
+            <a href="/admin/adminProduct">
+                <p style=" font-size: 18px; margin-top: 30px ;
+            font-weight: 900;">Product</p>
+            </a>
+            <a href="/admin/adminOrder">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Order</p>
+            </a>
+            <a href="/admin/comment">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Comment</p>
+            <a href="/admin/adminEmployee">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Employee</p>
+            </a>
+            <div> </div>
+        </div>
+        <div style="width: 100px;">
+
+        </div>
+    </nav>
+    <hr style="margin-top: 20px;">
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px; font-weight: 900;">
+        <h1>Dashboard</h1>
+    </div>
+    <article>
+        <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+            <% if(userData1.length!=0){ var i=1; userData1.forEach(function(data1){ %>
+                <% if(userData2.length!=0){ var i=1; userData2.forEach(function(data2){ %>
+                    <% if(userData3.length!=0){ var i=1; userData3.forEach(function(data3){ %>
+                        <% if(userData4.length!=0){ var i=1; userData4.forEach(function(data4){ %>
+                            <% if(userData5.length!=0){ var i=1; userData5.forEach(function(data5){ %>
+                                <% if(userData6.length!=0){ var i=1; userData6.forEach(function(data6){ %>
+                                    <% if(userData7.length!=0){ var i=1; userData7.forEach(function(data7){ %>
+
+                                        <div>
+
+                                            <p
+                                                style="background-color: rgb(26, 26, 27); margin-top: 0; height: 50px; padding-top: 10px; border-radius: 10px; margin-top: -20px; width: 100;">
+                                                Amount of cutomer user</p>
+                                            <div style="display: flex; justify-content: center;">
+                                                <%= data1.c %>
+                                            </div>
+                                            <p>user</p>
+                                        </div>
+                                        <div>
+                                            <p
+                                                style="background-color: rgb(26, 26, 27); margin-top: 0; height: 50px; padding-top: 10px; border-radius: 10px; margin-top: -20px; width: 100;">
+                                                Amount of product</p>
+
+                                            <div style="display: flex; justify-content: center;">
+                                                <%= data.p %>
+                                            </div>
+                                            <p>piece</p>
+                                        </div>
+                                        <div>
+                                            <p
+                                                style="background-color: rgb(26, 26, 27); margin-top: 0; height: 50px; padding-top: 10px; border-radius: 10px; margin-top: -20px;">
+                                                Amount of employee</p>
+
+                                            <div style="display: flex; justify-content: center;">
+                                                <%= data2.e %>
+                                            </div>
+                                            <p>people</p>
+                                        </div>
+                                        <div>
+                                            <p
+                                                style="background-color: rgb(26, 26, 27); margin-top: 0; height: 50px; padding-top: 10px; border-radius: 10px; margin-top: -20px;">
+                                                Amount of order(ordered)</p>
+
+
+                                            <div style="display: flex; justify-content: center;">
+                                                <%= data3.o1 %>
+                                            </div>
+                                            <p>order</p>
+                                        </div>
+                                        <div>
+                                            <p
+                                                style="background-color: rgb(26, 26, 27); margin-top: 0; height: 50px; padding-top: 10px; border-radius: 10px; margin-top: -20px;">
+                                                Amount of order(pending)</p>
+
+
+                                            <div style="display: flex; justify-content: center;">
+                                                <%= data4.o2 %>
+                                            </div>
+                                            <p>order</p>
+                                        </div>
+                                        <div>
+                                            <p
+                                                style="background-color: rgb(26, 26, 27); margin-top: 0; height: 50px; padding-top: 10px; border-radius: 10px; margin-top: -20px;">
+                                                Amount of order(complete)</p>
+
+
+                                            <div style="display: flex; justify-content: center;">
+                                                <%= data5.o3 %>
+                                            </div>
+                                            <p>order</p>
+                                        </div>
+                                        <div>
+                                            <p
+                                                style="background-color: rgb(26, 26, 27); margin-top: 0; height: 50px; padding-top: 10px; border-radius: 10px; margin-top: -20px;">
+                                                salary paid</p>
+
+
+                                            <div style="display: flex; justify-content: center;">
+                                                <%= data6.s %>
+                                            </div>
+                                            <p>BAHT</p>
+                                        </div>
+                                        <div>
+                                            <p
+                                                style="background-color: rgb(26, 26, 27); margin-top: 0; height: 50px; padding-top: 10px; border-radius: 10px; margin-top: -20px;">
+                                                Total profit</p>
+
+                                                <div style="display: flex; justify-content: center;">
+                                                    <%= data7.profit %>
+                                                </div>
+                                            <p>BAHT</p>
+                                        </div>
+                                        <% i++; }) %>
+                                            <% } else{ %>
+
+                                                <% } %>
+                                                    <% i++; }) %>
+                                                        <% } else{ %>
+
+                                                            <% } %>
+                                                                <% i++; }) %>
+                                                                    <% } else{ %>
+
+                                                                        <% } %>
+                                                                            <% i++; }) %>
+                                                                                <% } else{ %>
+
+                                                                                    <% } %>
+                                                                                        <% i++; }) %>
+                                                                                            <% } else{ %>
+
+                                                                                                <% } %>
+                                                                                                    <% i++; }) %>
+                                                                                                        <% } else{ %>
+
+                                                                                                            <% } %>
+                                                                                                                <% i++;
+                                                                                                                    })
+                                                                                                                    %>
+                                                                                                                    <% } else{
+                                                                                                                        %>
+
+                                                                                                                        <% }
+                                                                                                                            %>
+
+
+                                                                                                                            <% i++;
+                                                                                                                                })
+                                                                                                                                %>
+                                                                                                                                <% } else{
+                                                                                                                                    %>
+
+                                                                                                                                    <% }
+                                                                                                                                        %>
+
+
+
+    
+
+
+
+
+    
+
+
+</body>
+
+</html>

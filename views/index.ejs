@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body >
+    <nav >
+        <a href="/"><div style="display: flex; justify-content: center; margin-top: 10px; margin-left: 10px;">
+            <div ><img src="../../img/fried-chicken-svgrepo-com.svg" width="55px" alt=""></div>
+            
+            <pre style="font-size: 14px; font-weight: 900; padding-top: 16px;" >Chicken 
+real pork</pre>
+        </div></a>
+        <div class="head">   
+            <a href="/"><p style=" font-size: 15px; margin-top: 15px;
+            font-weight: 900;">Menu</p></a>
+            <a href="/home/feedback">  <p style=" font-size: 15px; margin-top: 15px;
+            font-weight: 900;">Feed back</p></a>
+            <% if (title === 0) { %>
+                <a href="/signIn"> <div class="signIn">Sign in</div></a>
+                <%} else { %>
+                    <a href="/signIn/signOut"  ><div class="signIn" style="background-color: black; color: white;">Sign out</div></a>
+                <% } %>
+            <div class="orderOption">
+               <a href=""class="orderLeft"> <p >TAKE HOME</p></a>
+               <a href=""class="orderRight"> <p >DELIVERLY</p></a>
+            </div>
+           
+            <div>
+                <a href="/cart"><img src="../../img/shopping-cart-outline-svgrepo-com.svg" style="margin: 10px 20px 0px 20px;" width="40%" alt=""></a>
+            </div>
+        </div>
+    </nav>
+    <div style="margin-top: 20px;"> 
+        <img src="../../img/fried-chicken-g0ab85795b_1920.png"  width="100%" alt="">
+    </div>
+    <h1 style="margin-left: 40px; margin-top: 20px;">Food</h1>
+    <article>
+        <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+            <% if (data.productType=='food' ) { %>
+                <div style="background-color: rgba(53, 51, 51, 0.267);">
+                    <span ><img src="../../img/<%=data.image %>" width="100%" height="100%" style="padding-top: 30px;" alt=""></span>
+                    <span class="bProduct">
+                        
+                            <h3 style="color: aliceblue; padding-top: 15px; font-size: 22px; margin-left: 27px;"><%=data.productName %></h3>
+                            
+                       
+                        <span style="display: flex; justify-content: space-between;">
+                            <h3 style="color: aliceblue; padding-top: 30px; font-size: 18px;margin-left: 20px;">Price: <%=data.price %> BATH</h3>
+                            <form action="/cart/addCart" method="post" style="display: flex; justify-content: space-between; width: 250px;" > 
+                                <input type="text" name="amount" placeholder="1*" style=" text-align: center; width: 30px; height: 30px; margin-left: 60px; margin-top: 22px;">
+                                <input type="text" name="no" value="<%=data.productNo %>" style="display: none;">
+                                <input  type="submit" class="orderButton" value="order" style=" text-align: center;">
+                            </form>
+                            
+                            
+                            
+                        </span>
+        
+                    </span>
+                    
+                </div>
+                    
+                <%} else { %>
+
+                    <% } %>
+
+                        <% i++; }) %>
+                            <% } else{ %>
+
+                                <% } %>
+       
+                
+    </article>
+    <hr style="margin-bottom: 30px;">
+
+
+    <h1 style="margin-left: 40px; margin-top: 20px;">Dessert</h1>
+    <article>
+        <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+            <% if (data.productType=='dessert' ) { %>
+                <div style="background-color: rgba(53, 51, 51, 0.267);">
+                    <span ><img src="../../img/<%=data.image %>" width="100%" height="100%" style="padding-top: 30px;" alt=""></span>
+                    <span class="bProduct">
+                        <h3 style="color: aliceblue; padding-top: 15px; font-size: 22px; margin-left: 27px;"><%=data.productName %></h3>
+                        <span style="display: flex; justify-content: space-between;">
+                            <h3 style="color: aliceblue; padding-top: 30px; font-size: 18px;margin-left: 20px;">Price: <%=data.price %> BATH</h3>
+                            <form action="/cart/addCart" method="post" style="display: flex; justify-content: space-between; width: 250px;" > 
+                                <input type="text" name="amount" placeholder="1*" style=" text-align: center; width: 30px; height: 30px; margin-left: 60px; margin-top: 22px;">
+                                <input type="text" name="no" value="<%=data.productNo %>" style="display: none;">
+                                <input  type="submit" class="orderButton" value="order" style=" text-align: center;">
+                            </form>
+                            
+                        </span>
+        
+                    </span>
+                    
+                </div>
+                    
+                <%} else { %>
+
+                    <% } %>
+
+                        <% i++; }) %>
+                            <% } else{ %>
+
+                                <% } %>
+       
+                
+    </article>
+    <hr style="margin-bottom: 30px;">
+    <h1 style="margin-left: 40px; margin-top: 20px; ">Drinking</h1>
+    <article>
+        <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+            <% if (data.productType=='drinking' ) { %>
+                <div style="background-color: rgba(53, 51, 51, 0.267);">
+                    <span ><img src="../../img/<%=data.image %>" width="auto" height="320px" style="padding-top: 30px;" alt=""></span>
+                    <span class="bProduct">
+                        <h3 style="color: aliceblue; padding-top: 15px; font-size: 22px; margin-left: 27px;"><%=data.productName %></h3>
+                        <span style="display: flex; justify-content: space-between;">
+                            <h3 style="color: aliceblue; padding-top: 30px; font-size: 18px;margin-left: 20px;">Price: <%=data.price %> BATH</h3>
+                            <form action="/cart/addCart" method="post" style="display: flex; justify-content: space-between; width: 250px;" > 
+                                <input type="text" name="amount" placeholder="1*" style=" text-align: center; width: 30px; height: 30px; margin-left: 60px; margin-top: 22px;">
+                                <input type="text" name="no" value="<%=data.productNo %>" style="display: none;">
+                                <input  type="submit" class="orderButton" value="order" style=" text-align: center;">
+                            </form>
+                            
+                        </span>
+        
+                    </span>
+                    
+                </div>
+                    
+                <%} else { %>
+
+                    <% } %>
+
+                        <% i++; }) %>
+                            <% } else{ %>
+
+                                <% } %>
+       
+                
+                
+    </article>
+
+
+
+
+    <footer>
+        <div>
+            <p>Menu</p>
+            <a href=""><li>Chicken</li></a>
+            <a href=""><li>Drinks</li></a>
+            
+        </div>
+        <div><p>About us</p></div>
+        <div>
+            <p style="padding-bottom: 10px;">Contact us</p>
+            <a href=""><i class="fa-brands fa-facebook" style="font-size: 25px; padding-right: 5px;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-square-twitter" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-youtube" style="font-size: 25px;  padding-right: 5px;" ></i></a>    
+        </div>
+        
+
+    </footer>
+    <div class="f">
+        <p>Copyright © 2023–2023 ChickenRealPork.com. All rights reserved.</p>
+    </div>
+   
+   
+    <script src="../../javascripts/cart.js"></script>
+</body>
+
+</html>

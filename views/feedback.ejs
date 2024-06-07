@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body >
+    <nav >
+        <a href="/"><div style="display: flex; justify-content: center; margin-top: 10px; margin-left: 10px;">
+            <div ><img src="../../img/fried-chicken-svgrepo-com.svg" width="55px" alt=""></div>
+            
+            <pre style="font-size: 14px; font-weight: 900; padding-top: 16px;" >Chicken 
+real pork</pre>
+        </div></a>
+        <div class="head">   
+            <a href="/"><p style=" font-size: 15px; margin-top: 15px;
+            font-weight: 900;">Menu</p></a>
+           <a href="/home/feedback">  <p style=" font-size: 15px; margin-top: 15px;
+            font-weight: 900;">Feed back</p></a>
+            <% if (title === 0) { %>
+                <a href="/signIn"> <div class="signIn">Sign in</div></a>
+                <%} else { %>
+                    <a href="/signIn/signOut"  ><div class="signIn" style="background-color: black; color: white;">Sign out</div></a>
+                <% } %>
+            <div class="orderOption">
+               <a href=""class="orderLeft"> <p >TAKE HOME</p></a>
+               <a href=""class="orderRight"> <p >DELIVERLY</p></a>
+            </div>
+           
+            <div>
+                <a href="/cart"><img src="../../img/shopping-cart-outline-svgrepo-com.svg" style="margin: 10px 20px 0px 20px;" width="40%" alt=""></a>
+            </div>
+        </div>
+    </nav>
+  
+    <h1 style="margin-left: 40px; margin-top: 20px;">Feedback</h1>
+    <form action="/home/feedback/add" method="post" style="display: flex; justify-content: center; align-items: center ; flex-direction: column;">
+        <TEXTAREA NAME="COMMENT"COLS=100 ROW=15  style="width: 95%; height: 100px; border: 3px solid; font-size: 18px; padding: 20px;"  placeholder="Insert your feedback*"></TEXTAREA>
+        <div style="display: flex; justify-content: end; width: 90%; ">
+            <input  style="width: 200px; height: 50px;" type="submit" value="submit" >
+        </div>
+    </form>
+   
+
+    <footer>
+        <div>
+            <p>Menu</p>
+            <a href=""><li>Chicken</li></a>
+            <a href=""><li>Drinks</li></a>
+            
+        </div>
+        <div><p>About us</p></div>
+        <div>
+            <p style="padding-bottom: 10px;">Contact us</p>
+            <a href=""><i class="fa-brands fa-facebook" style="font-size: 25px; padding-right: 5px;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-square-twitter" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-youtube" style="font-size: 25px;  padding-right: 5px;" ></i></a>    
+        </div>
+        
+
+    </footer>
+    <div class="f">
+        <p>Copyright © 2023–2023 ChickenRealPork.com. All rights reserved.</p>
+    </div>
+   
+   
+    <script src="../../javascripts/cart.js"></script>
+</body>
+
+</html>

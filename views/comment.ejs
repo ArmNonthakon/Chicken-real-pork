@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="../../css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <a href="/admin">
+            <div style="display: flex; justify-content: center; margin-top: 10px; margin-left: 10px;">
+                <div><img src="../../img/fried-chicken-svgrepo-com.svg" width="55px" alt=""></div>
+
+                <pre style="font-size: 14px; font-weight: 900; padding-top: 16px;">Chicken 
+real pork</pre>
+            </div>
+        </a>
+        <div class="head">   
+            <a href="/admin">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Home</p>
+            </a>
+            <a href="/admin/adminProduct">
+                <p style=" font-size: 18px; margin-top: 30px ;
+            font-weight: 900;">Product</p>
+            </a>
+            <a href="/admin/adminOrder">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Order</p>
+            </a>
+            <a href="/admin/comment">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Comment</p>
+            <a href="/admin/adminEmployee">
+                <p style=" font-size: 18px; margin-top: 30px; 
+            font-weight: 900;">Employee</p>
+            </a>
+            <div> </div>
+        </div>
+        <div style="width: 100px;">
+            <a href="/signIn">
+                
+            </a>
+        </div>
+    </nav>
+    <hr style="margin-top: 20px;">
+    <div style="display: flex;">
+        <h1 style="margin-left: 40px; margin-top: 20px;">Comment</h1>
+        
+        
+    </div>
+    <table>
+        <tr>
+            <th>Customer No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Comment</th>
+            
+        </tr>
+        
+            <% if(userData.length!=0){ var i=1; userData.forEach(function(data){ %>
+                <tr>
+                    <td><%= data.customerNo %></td>
+                    <td><%= data.customerName %></td>
+                    <td><%= data.customerEmail %></td>
+                    <td><%= data.comment %></td>
+
+                </tr>
+                <% i++; }) %>
+                    <% } else{ %>
+        
+                        <% } %>
+        
+
+    </table>
+
+
+
+
+
+
+
+    <footer >
+        <div>
+            <p>Menu</p>
+            <a href="">
+                <li>Chicken</li>
+            </a>
+            <a href="">
+                <li>Drinks</li>
+            </a>
+
+        </div>
+        <div>
+            <p>About us</p>
+        </div>
+        <div>
+            <p style="padding-bottom: 10px;">Contact us</p>
+            <a href=""><i class="fa-brands fa-facebook" style="font-size: 25px; padding-right: 5px;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-square-twitter" style="font-size: 25px;  padding-right: 5px;"></i></a>
+            <a href=""> <i class="fa-brands fa-youtube" style="font-size: 25px;  padding-right: 5px;"></i></a>
+        </div>
+
+
+    </footer>
+    <div class="f">
+        <p>Copyright © 2023–2023 ChickenRealPork.com. All rights reserved.</p>
+    </div>
+
+
+
+</body>
+
+</html>
